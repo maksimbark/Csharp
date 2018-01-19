@@ -6,13 +6,18 @@ namespace vkFriendsModule
 {
     public static class CheckFile
     {
+
+        private static string fileName = @"lastFriendsStats.json";
+
         public static List<User> CreateFromFile()
         {
-            return (JsonConvert.DeserializeObject<List<User>>(System.IO.File.ReadAllText(@"/users/maksimbarkalov/lastFriends.json")));
+            if (System.IO.File.Exists(fileName))
+                return (JsonConvert.DeserializeObject<List<User>>(System.IO.File.ReadAllText(fileName)));
+            return new List<User>();
         }
 
         public static void WriteToFile(List<User> toWrite) {
-            System.IO.File.WriteAllText(@"/users/maksimbarkalov/lastFriends.json", JsonConvert.SerializeObject(toWrite));
+            System.IO.File.WriteAllText(fileName, JsonConvert.SerializeObject(toWrite));
         }
 
     }

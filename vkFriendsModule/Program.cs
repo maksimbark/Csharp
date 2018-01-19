@@ -5,15 +5,13 @@ using System.Linq;
 
 namespace vkFriendsModule
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             List<User> prev = new List<User>();
 
-            if (System.IO.File.Exists("/users/maksimbarkalov/lastFriends.json")) {
-                prev = CheckFile.CreateFromFile();
-            }
+            prev = CheckFile.CreateFromFile();
 
             var result = VKParcer.GetFriends(209243336, "name");
             int i = 0;
@@ -28,7 +26,8 @@ namespace vkFriendsModule
             var inserted = result.Except(prev);
             var deleted = prev.Except(result);
 
-            if (deleted.Count()> 0) {
+            if (deleted.Count() > 0)
+            {
                 Console.WriteLine("Deleted:");
                 i = 0;
                 foreach (var item in deleted)

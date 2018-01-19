@@ -24,6 +24,10 @@ namespace vkFriendsModule
         {
             return id;
         }
+        public override string ToString()
+        {
+            return $"{name} {surname} (https://vk.com/id{id})";
+        }
     }
     /*
     public class UserComparer : IEqualityComparer<User>

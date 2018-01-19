@@ -11,6 +11,7 @@ namespace vkFriendsModule
     {
         public static string Ver = "5.8";
         private static string constructor = "https://api.vk.com/method/";
+        private static string access = "place_token_here";
 
         public static List<User> GetFriends(int id, string fields)
         {
@@ -25,5 +26,13 @@ namespace vkFriendsModule
 
             return friendsList.OrderBy(i => (i.surname, i.name)).ToList();
         }
+
+        public static void DelFriend(int id) {
+            string address = $"{constructor}friends.delete?user_id={id}&access_token={access}&v={Ver}";
+            HttpClient query = new HttpClient();
+            query.GetAsync(address);
+        }
+    
+       
     }
 }

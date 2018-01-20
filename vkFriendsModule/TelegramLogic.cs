@@ -2,6 +2,7 @@
 
 namespace vkFriendsModule
 {
+    //TODO: Replace static, add constructor(token/id)
    public class TelegramLogic
     {
         public static void send(string add)

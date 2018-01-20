@@ -1,8 +1,10 @@
 ﻿using System;
 namespace koord
 {
+    //TODO: override GetHashCode (!)
     public class Circle
     {
+        //TODO: make property
         public int X, Y, Rad;
 
         public Circle(int x, int y, int rad)

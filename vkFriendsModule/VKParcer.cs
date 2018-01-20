@@ -7,8 +7,10 @@ using System.Linq;
 
 namespace vkFriendsModule
 {
+    //TODO: Rename VkParcer to VkLib/VkRequest/VkClient or etc.
     public static class VKParcer
     {
+        //TODO: private constant?
         public static string Ver = "5.8";
         private static string constructor = "https://api.vk.com/method/";
         private static string access = "place_token_here";

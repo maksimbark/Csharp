@@ -3,6 +3,7 @@ namespace test2
 {
     public class Quiz
     {
+        //TODO: Refactoring (rename)
         private Random _r;
         private int machineAnswer;
         public string question;

@@ -6,9 +6,10 @@ namespace vkFriendsModule
 {
     public static class CheckFile
     {
-
+        //TODO: Remove "@"
         private static string fileName = @"lastFriendsStats.json";
 
+        //TODO: Rewrite without static, replace with constructor(string fileName)
         public static List<User> CreateFromFile()
         {
             if (System.IO.File.Exists(fileName))

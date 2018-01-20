@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace arrayWork
 {
+    //TODO: Delete project?
 	class Program
     {
 
@@ -16,7 +17,6 @@ namespace arrayWork
         {
 			int[] a = { 1, 2, 5, 8, 4, 6, 9, 0, 23, 11, 5, 4, -9 };
            var meow = a.Where(k => k % 2 == 1).OrderByDescending(k => k);
-            a.
         }
 
 	}

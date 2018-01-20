@@ -37,6 +37,7 @@ namespace koord
                         answer += item.ToString();
                 }
             }
+            //TODO: Clean
             /*
             for (int i = 0; i < count; ++i)
             {
@@ -52,8 +53,9 @@ namespace koord
 
         public string ShowSortedArray()
         {
+            //TODO: Tuple ?
             Dictionary<int, double> toSort = new Dictionary<int, double>();
-
+            //TODO: Dont use unnecessary variable
             int count = _circleArray.Count;
 
             for (int i = 0; i < count; ++i)
@@ -61,6 +63,7 @@ namespace koord
 
             var sorted = toSort.OrderBy(i => i.Value).Select(i => i.Key);
 
+            //TODO: Clean
             string answer = "";
             /*
             foreach (var item in sorted)

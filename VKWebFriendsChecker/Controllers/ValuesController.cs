@@ -7,6 +7,7 @@ using vkFriendsModule;
 
 namespace VKWebFriendsChecker.Controllers
 {
+    //TODO: fix routing
     //[Route("api/[controller]")]
     [Route("meow")]
     public class ValuesController : Controller
@@ -15,6 +16,7 @@ namespace VKWebFriendsChecker.Controllers
         [HttpGet]
         public (List<User> Added, List<User> Removed) Get()
         {
+            //TODO: Move to services
             (List<User> Added, List<User> Removed) result = vkFriendsModule.Updater.GetUpdates();
             string send = "";
             if (result.Added.Count > 0) {
@@ -44,7 +46,7 @@ namespace VKWebFriendsChecker.Controllers
 
             return result;
         }
-
+        //TODO: Clean
         /*
         // GET api/values/5
         [HttpGet("{id}")]

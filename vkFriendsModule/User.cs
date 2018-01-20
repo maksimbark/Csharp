@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace vkFriendsModule
 {
+    //TODO: Rename
     public class User
     {
         [JsonProperty("first_name")]
@@ -15,11 +16,13 @@ namespace vkFriendsModule
         [JsonProperty("id")]
         public int id;
 
+        //TODO: Check type
         public override bool Equals(object obj)
         {
             return (obj as User).id == id;
         }
 
+        //TODO: Hash with name^surname
         public override int GetHashCode()
         {
             return id;

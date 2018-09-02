@@ -17,7 +17,12 @@ namespace vkFriendsModule
 
         public override bool Equals(object obj)
         {
-            return (obj as User).id == id;
+            if (obj is User)
+            {
+                return (obj as User).id == id;
+            }
+            else
+                return false;
         }
 
         public override int GetHashCode()
@@ -29,18 +34,4 @@ namespace vkFriendsModule
             return $"{name} {surname} (https://vk.com/id{id})";
         }
     }
-    /*
-    public class UserComparer : IEqualityComparer<User>
-    {
-        public bool Equals(User x, User y)
-        {
-            return x.id == y.id;
-        }
-
-        public int GetHashCode(User obj)
-        {
-            return obj.id;
-        }
-    }
-    */
 }

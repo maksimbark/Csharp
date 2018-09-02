@@ -13,7 +13,7 @@ namespace vkFriendsModule
 
             prev = CheckFile.CreateFromFile();
 
-            var result = VKParcer.GetFriends(209243336, "name");
+            var result = VKClient.GetFriends(209243336, "name");
             int i = 0;
             foreach (var item in result)
             {

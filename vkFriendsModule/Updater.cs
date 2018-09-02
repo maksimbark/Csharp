@@ -4,14 +4,13 @@ using System.Linq;
 
 namespace vkFriendsModule
 {
-    public struct Updater
+    public static class Updater
     {
         public static (List<User> Added, List<User> Removed) GetUpdates()
         {
-            List<User> prev = new List<User>();
+            List<User> prev = CheckFile.CreateFromFile();
 
-            prev = CheckFile.CreateFromFile();
-            var result = VKParcer.GetFriends(209243336, "name");
+            var result = VKClient.GetFriends(209243336, "name");
             CheckFile.WriteToFile(result);
 
             var inserted = result.Except(prev).ToList();

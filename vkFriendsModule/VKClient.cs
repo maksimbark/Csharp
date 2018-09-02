@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace vkFriendsModule
 {
-    public static class VKParcer
+    public static class VKClient
     {
         public static string Ver = "5.8";
         private static string constructor = "https://api.vk.com/method/";
@@ -15,7 +15,7 @@ namespace vkFriendsModule
 
         public static List<User> GetFriends(int id, string fields)
         {
-            string address = $"{constructor}friends.get?user_id={id}&fields={fields}&v={Ver}";
+            string address = $"{constructor}friends.get?user_id={id}&fields={fields}&access_token={access}&v={Ver}";
             HttpClient query = new HttpClient();
             var result = query.GetAsync(address).Result.Content.ReadAsStringAsync().Result;
 

@@ -7,7 +7,7 @@ namespace vkFriendsModule
     public static class CheckFile
     {
 
-        private static string fileName = @"lastFriendsStats.json";
+        private static string fileName = "lastFriendsStats.json";
 
         public static List<User> CreateFromFile()
         {

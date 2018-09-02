@@ -2,7 +2,7 @@
 
 namespace vkFriendsModule
 {
-   public class TelegramLogic
+   public class TelegramClient
     {
         public static void send(string add)
         {
